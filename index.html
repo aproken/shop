@@ -116,53 +116,65 @@
 
       <aside class="left-side">
 
-        <h4 class="left-side__title">Все категории</h4>
-        <ul class="left-side-list">
-          <div class="left-side-list__elem">
-            <a href="">
+        <div class="category">
+          <h4 class="left-side__title">Все категории</h4>
+          <ul class="left-side-list">
+            <div class="left-side-list__elem">
+              <a href="">
+                <li>Категория в которой нашли что-то <output>(xxx)</output></li>
+              </a>
+            </div>
+            
+            <div class="left-side-list__elem">
               <li>Категория в которой нашли что-то <output>(xxx)</output></li>
-            </a>
-          </div>
-          
-          <div class="left-side-list__elem">
-            <li>Категория в которой нашли что-то <output>(xxx)</output></li>
-          </div>
+            </div>
 
-          <div class="left-side-list__elem">
-            <li>Категория в которой нашли что-то <output>(xxx)</output></li>
-          </div>
+            <div class="left-side-list__elem">
+              <li>Категория в которой нашли что-то <output>(xxx)</output></li>
+            </div>
 
-          <div class="left-side-list__elem">
-            <li>Категория в которой нашли что-то <output>(xxx)</output></li>
-          </div>
+            <div class="left-side-list__elem">
+              <li>Категория в которой нашли что-то <output>(xxx)</output></li>
+            </div>
 
-          <div class="left-side-list__elem">
-            <li>Категория в которой нашли что-то <output>(xxx)</output></li>
-          </div>
+            <div class="left-side-list__elem">
+              <li>Категория в которой нашли что-то <output>(xxx)</output></li>
+            </div>
 
-          <div class="left-side-list__elem">
-            <li>Категория в которой нашли что-то <output>(xxx)</output></li>
-          </div>
+            <div class="left-side-list__elem">
+              <li>Категория в которой нашли что-то <output>(xxx)</output></li>
+            </div>
 
-          <div class="left-side-list__elem">
-            <li>Категория в которой нашли что-то <output>(xxx)</output></li>
-          </div>
+            <div class="left-side-list__elem">
+              <li>Категория в которой нашли что-то <output>(xxx)</output></li>
+            </div>
 
-          <div class="left-side-list__elem">
-            <li>Еще <output>10</output> категорий</li>
-          </div>
-        </ul>
-
-        <h4 class="left-side__title">Цена, валюта</h4>  
+            <div class="left-side-list__elem">
+              <li>Еще <output>10</output> категорий</li>
+            </div>
+          </ul>
+        </div> 
         
-        <div id="app">
+        <div class="range-slider">
+          <h4 class="range-slider__title">Цена, валюта</h4> 
+          
+          <form class="double-range" action="#">от&nbsp;
+            <input class="double-range__number" type="number" name="min-price" min="1 000" max="1 000 000" step="1">&nbsp;до&nbsp;
+            <input class="double-range__number" type="number" name="max-price" min="1 000" max="1 000 000" step="1">&nbsp;Р
+            
+            <input class="double-range__range" type="range" name="min-price" min="1 000" max="1 000 000" step="1">
+            <input class="double-range__range" type="range" name="max-price" min="1 000" max="1 000 000" step="1">
+          </form>
+        </div>
+        
+        <!-- <div id="app">
           <div class='range-slider'>
             <input type="number" min="0" max="180" step="1" v-model="sliderMin">
             <input type="range" min="0" max="180" step="1" v-model="sliderMin">
             <input type="number" min="0" max="180" step="1" v-model="sliderMax">
             <input type="range" min="0" max="180" step="1" v-model="sliderMax">
           </div>
-        </div>
+        </div> -->
         
 
       </aside>
