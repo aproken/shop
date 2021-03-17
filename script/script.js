@@ -3,7 +3,7 @@ const minRange = document.querySelector(".min__range");
 const maxValue = document.querySelector(".max");
 const maxRange = document.querySelector(".max__range");
 const buttonClear = document.querySelector(".button__clear");
-const leftSideBrands = document.querySelector(".left-side__brands");
+const brandsCheckbox = document.querySelectorAll(".brands-checkbox");
 
 let min = 1000,
   max = 1000000;
@@ -35,7 +35,7 @@ const inputClear = () => {
   maxValue.value = max;
   maxRange.value = max;
 
-  for (let link of leftSideBrands) {
+  for (let link of brandsCheckbox) {
     if (link.checked) {
       link.checked = false;
     }
