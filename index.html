@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
@@ -20,10 +18,13 @@
 
   <section class="section page-search">
     <div class="container">
-      <form action="" method="get">
-        <input name="s" placeholder="Искать здесь..." type="search">
-        <button type="submit">Найти</button>
-        <button type="submit">Закрыть</button>
+      <form class="search" action="#" method="get">
+        <i class="search-icon"></i>
+        <input class="page-search__input" type="search" name="search">
+        <div class="button-list">
+          <button class="button button__search" type="submit">Найти</button>
+          <button class="button button__close" type="submit">Закрыть</button>
+        </div>
       </form>
     </div>
   </section>
@@ -32,7 +33,7 @@
     <div class="container">
       <div class="result-search-wrapper">
         <h2 class="result-search__title">Результаты по запросу</h2>
-        <p class="result-search__text">Показаны результаты для “Запрос пользователя”. Вы искали “Запрос пользователя”.</p>
+        <p class="result-search__text">Показаны результаты для <output class="search-output">"Запрос пользователя"</output>. Вы искали <output class="search-output">"Запрос пользователя"</output>.</p>
       </div>
 
       <div class="slider-wrapper slider-shadow">
@@ -158,23 +159,30 @@
         <div class="range-slider">
           <h4 class="range-slider__title">Цена, валюта</h4> 
           
-          <form class="double-range" action="#">от&nbsp;
-            <input class="double-range__number" type="number" name="min-price" min="1 000" max="1 000 000" step="1">&nbsp;до&nbsp;
-            <input class="double-range__number" type="number" name="max-price" min="1 000" max="1 000 000" step="1">&nbsp;Р
-            
-            <input class="double-range__range" type="range" name="min-price" min="1 000" max="1 000 000" step="1">
-            <input class="double-range__range" type="range" name="max-price" min="1 000" max="1 000 000" step="1">
-          </form>
+          <label>от
+            <input type='text' class="min" value="1000" />
+          </label>
+          <input type='range' class="range min__range" max="1000000" min="1000" value="1000" />
+          
+          <label>до
+            <input type='text' class="max" value="1000000" />
+          </label>
+          <input type='range' class="range max__range" max="1000000" min="1000" value="1000000" /> 
+          <label>Р</label> 
+
+          <button class="button button__clear">
+            Очистить
+          </button>
         </div>
         
-        <!-- <div id="app">
-          <div class='range-slider'>
-            <input type="number" min="0" max="180" step="1" v-model="sliderMin">
-            <input type="range" min="0" max="180" step="1" v-model="sliderMin">
-            <input type="number" min="0" max="180" step="1" v-model="sliderMax">
-            <input type="range" min="0" max="180" step="1" v-model="sliderMax">
-          </div>
-        </div> -->
+        <div class="category">
+          <h4 class="left-side__title">Бренды</h4>
+          <ul class="left-side__brands">
+            <li><input type="checkbox">Бренд <output>(xxx)</output></li>
+            <li><input type="checkbox">Бренд <output>(x)</output></li>
+            <li><input type="checkbox">Бренд <output>(х xxx)</output></li>
+          </ul>
+        </div>
         
 
       </aside>
@@ -303,6 +311,6 @@
   </main>
   
 
-  <script src=""></script>
+  <script src="script/script.js"></script>
 </body>
 </html>
